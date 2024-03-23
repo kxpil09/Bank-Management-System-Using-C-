@@ -2,6 +2,9 @@
 #include<stdlib.h>
 #include<windows.h>
 using namespace std;
+
+// Function to display the Bank Management System title
+
 void showdata()
 {
 	
@@ -16,6 +19,9 @@ void showdata()
 	system("CLS");
 	
 }
+
+// Function to display user choices
+
 void choice()
 {
 	cout<<endl;
@@ -27,6 +33,8 @@ void choice()
 	cout<<"5. Remove existing account"<<endl;
 	cout<<"6. Exit"<<endl;
 }
+
+// Bank class to handle operations
 
 class bank{
 	private:
@@ -321,6 +329,8 @@ class bank{
 	
 		
 };
+// Bank class to handle operations
+
 main()
 {
 showdata();
@@ -330,39 +340,20 @@ showdata();
 	int press;
 	while(true)
 	{
-	choice();
-	
-	cin>>press;
-	system("CLS");
-	if(press==1)
-	{
-		b.data(press);
+		// Display user choices and get user input
+		choice();
+		cin>>press;
+		system("CLS");
 		
+		// Perform operations based on user choice
+		if(press>=1 && press<=6)
+		{
+			b.data(press);
+		}
+		else{
+			cout<<"Invalid input"<<endl;
+		}
 	}
-	else if(press==2)
-	{
-		b.data(press);
-	}
-	else if(press==3)
-	{
-		b.data(press);
-	}
-	else if(press==4)
-	{
-		b.data(press);
-	}
-	else if(press==5)
-	{
-		b.data(press);
-	}
-	else if(press==6)
-	{
-		b.data(press);
-	}
-	else{
-		cout<<"Invalid input"<<endl;
-	}
-   }
 }
 
 
